@@ -12,6 +12,8 @@
   -moz-animation: AnimationName 30s ease infinite;
   -o-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
+  --sm: 40px;
+  --md: 65px;
 }
 
 *{
@@ -54,6 +56,11 @@
   padding: 13px 0px;
 }
 
+.information  h2{
+  color: var(--blue);
+  padding: 15px;
+}
+
 .social-medias{
   display: flex;
   justify-content: space-around;
@@ -61,8 +68,8 @@
 
 .pad img{
   object-fit: cover;
-  width: 65px;
-  height: 65px;
+  width: var(--md);
+  height: var(--md);
 }
 .ig img:hover{
   background-color: #ff99ff;
@@ -98,7 +105,7 @@ a{
   display:grid;
   place-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, 600px);
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-gap: 30px;
   padding: 15px;
   background-color: var(--white);
@@ -148,13 +155,35 @@ a{
     margin: 10px auto;
     border-radius: 35px;
     max-width: 700px;
+    
   }
 
   .container{
     margin: 12px;
+   
   }
   .grid-container{
-    border-radius: 8px;
+    grid-template-columns: repeat(auto-fill, 600px);
+    border-radius: 12px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 290px){
+  .profile img{
+    width: 170px;
+    height: 170px;
+  }
+  .container-img{
+    width: 200px;
+    height: 200px;
+  }
+  .grid-container{
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+  .pad img{
+    width: var(--sm);
+    height: var(--sm);
   }
 }
 
